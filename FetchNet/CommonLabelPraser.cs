@@ -45,8 +45,6 @@ namespace FetchNet
                 }
             }
 
-           // col.GetMostPossibleAddress();
-
             return col;
         }
 
