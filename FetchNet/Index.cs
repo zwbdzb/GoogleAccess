@@ -12,6 +12,7 @@ using Winista.Text.HtmlParser.Util;
 
 namespace FetchNet
 {
+    //    轻量级别的文件下载，添加进启动菜单。
     //    自动更新系统hosts文件，下载地址  http://laod.cn/hosts/2015-google-hosts.html
     class Index
     {
