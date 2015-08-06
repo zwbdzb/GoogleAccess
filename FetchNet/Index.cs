@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Winista.Text.HtmlParser;
+using Winista.Text.HtmlParser.Filters;
+using Winista.Text.HtmlParser.Lex;
+using Winista.Text.HtmlParser.Tags;
+using Winista.Text.HtmlParser.Util;
+
 
 namespace FetchNet
 {
@@ -11,40 +17,25 @@ namespace FetchNet
     {
         static void Main(string[] args)
         {
-
-            var Alabel = new Label { LabelName = "A", LabelDesc = "链接", LabelAttr = new List<string> { "href" } };
-
-            var downLoader = new FileDownLoader<Label>
+            var downLoader = new FileDownLoader
             {
-                CareLabel = Alabel,
                 HostAddress = "http://laod.cn/hosts/2015-google-hosts.html"
             };
 
             downLoader.FileDownLoad();
 
             var parser = new CommonLabelPraser();
-            var col = downLoader.LabelPrase(parser);
+            var col = downLoader.LabelPrase<ATag>(parser);
 
             Address addr = col.GetMostPossibleAddress();
 
+            downLoader.HostAddress = addr.Href;
+            downLoader.FileDownLoad();
 
-            // C# 3.0  构造初始化   数组初始化
-            //List<string> fruits = new List<string> { "apple", "passionfruit", "banana", "mango", 
-            //                    "orange", "blueberry", "grape", "strawberry" };
+            Console.WriteLine(downLoader.HtmlContent);
 
-            //IEnumerable<string> query = fruits.Where(fruit => fruit.Length < 6).Where(m=>m.Length<1);
-
-            //foreach (string fruit in query)
-            //{
-            //    Console.WriteLine(fruit);
-            //}
-
-            //Console.WriteLine("------------------------------");
-
-            //foreach (var ii in fruits)
-            //{
-            //    Console.WriteLine(ii);
-            //}
+            var updater = new FileUpdater();
+            updater.UpdateFile(downLoader.HtmlContent);
 
             Console.ReadKey();
 

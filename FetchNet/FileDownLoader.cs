@@ -7,12 +7,16 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Text.RegularExpressions;
 
+using Winista.Text.HtmlParser;
+using Winista.Text.HtmlParser.Filters;
+using Winista.Text.HtmlParser.Lex;
+using Winista.Text.HtmlParser.Tags;
+using Winista.Text.HtmlParser.Util;
+
 namespace FetchNet
 {
-    public class FileDownLoader<T>  where   T: Label,new ()                 // 泛型类声明的写法<T>, 约束泛型参数T
-    {
-        // 关心的标签
-        public T CareLabel { get; set; }
+    public class FileDownLoader                 // 泛型类声明的写法<T>, 约束泛型参数T
+    {      
         public string HostAddress { get; set; }
         internal string HtmlContent { get; set; }
 
@@ -26,8 +30,8 @@ namespace FetchNet
             Debug.WriteLine(HtmlContent);
         }
 
-        // 解析文件中的T 标签 [ 算法设计模式]
-        public AddressCollection LabelPrase(ILabelPraser praser)
+        // 解析文件中的T 标签 [ 算法设计模式]  还是用泛型函数算了
+        public AddressCollection LabelPrase<T>(ILabelPraser praser) where T : Winista.Text.HtmlParser.ITag
         {
             return   praser.Prase<T>(HtmlContent);   
         }

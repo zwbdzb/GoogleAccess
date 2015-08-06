@@ -10,4 +10,3 @@ F:\Workplace\FetchNet\FetchNet\FetchNet\obj\Debug\FetchNet.pdb
 F:\Workplace\FetchNet\FetchNet\FetchNet\bin\Debug\FetchNet.exe
 F:\Workplace\FetchNet\FetchNet\FetchNet\bin\Debug\FetchNet.pdb
 F:\Workplace\FetchNet\FetchNet\FetchNet\bin\Debug\Winista.HtmlParser.dll
-F:\Workplace\FetchNet\FetchNet\FetchNet\obj\Debug\FetchNet.csprojResolveAssemblyReference.cache

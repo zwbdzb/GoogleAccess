@@ -48,7 +48,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Label.cs" />
+    <Compile Include="FetchNetException.cs" />
+    <Compile Include="FileUpdater.cs" />
     <Compile Include="ALabelParser.cs" />
     <Compile Include="CommonLabelPraser.cs" />
     <Compile Include="FileDownLoader.cs" />

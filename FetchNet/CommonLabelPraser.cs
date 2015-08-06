@@ -22,9 +22,6 @@ namespace FetchNet
         {
             Lexer lexer = new Lexer(htmlContent);
             Parser parser = new Parser(lexer);
-          //  AndFilter andLink =  new  AndFilter();
-
-            //  var filter = new TagNameFilter("A");
             NodeFilter filter = new NodeClassFilter(typeof(Winista.Text.HtmlParser.Tags.ATag ));
             NodeList  list  =   parser.ExtractAllNodesThatMatch(filter);
 
