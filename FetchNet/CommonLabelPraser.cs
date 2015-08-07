@@ -22,7 +22,7 @@ namespace FetchNet
         {
             Lexer lexer = new Lexer(htmlContent);
             Parser parser = new Parser(lexer);
-            NodeFilter filter = new NodeClassFilter(typeof(Winista.Text.HtmlParser.Tags.ATag ));
+            NodeFilter filter = new NodeClassFilter(typeof(T));
             NodeList  list  =   parser.ExtractAllNodesThatMatch(filter);
 
             AddressCollection col = new AddressCollection();
