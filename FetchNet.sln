@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FetchNet", "FetchNet\FetchNet.csproj", "{DAD422BF-C4B9-40D8-9D81-24E69F05DA92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeSearch", "TreeSearch\TreeSearch.csproj", "{3174A4E2-6AFE-42E8-B899-6D0655492774}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DAD422BF-C4B9-40D8-9D81-24E69F05DA92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAD422BF-C4B9-40D8-9D81-24E69F05DA92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAD422BF-C4B9-40D8-9D81-24E69F05DA92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3174A4E2-6AFE-42E8-B899-6D0655492774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3174A4E2-6AFE-42E8-B899-6D0655492774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3174A4E2-6AFE-42E8-B899-6D0655492774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3174A4E2-6AFE-42E8-B899-6D0655492774}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -18,6 +18,17 @@ namespace FetchNet
         }
         public List<Address> Collection { get; set; }
 
+        public FileDownLoader FileDownLoader
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         // 按照更新时间排序
         public void SortedByUpdateTime()
         {
