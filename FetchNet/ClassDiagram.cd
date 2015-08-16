@@ -40,7 +40,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="FetchNet.ALabelParser" Collapsed="true">
-    <Position X="2.75" Y="4" Width="1.5" />
+    <Position X="2.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAEAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ALabelParser.cs</FileName>
@@ -50,12 +50,9 @@
   <Interface Name="FetchNet.ILabelPraser" Collapsed="true">
     <Position X="2" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEAABAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAEAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ILabelPraser.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="FileDownLoader" />
-    </ShowAsAssociation>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

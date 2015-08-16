@@ -16,7 +16,7 @@ namespace TreeSearch
         public static ArrayList al = new ArrayList();
 
         [Conditional("DEBUG")]
-        static void Main(string[] args)
+        static void Mainaa(string[] args)
         {
 
             // 获取所有文件
