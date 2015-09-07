@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Net.Mime;
+using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using Winista.Text.HtmlParser;
@@ -16,8 +21,25 @@ namespace FetchNet
     //    自动更新系统hosts文件，下载地址  http://laod.cn/hosts/2015-google-hosts.html
     class Index
     {
+            private　static　void　ExtractResourceToFile(string　resourceName,　string　filename)
+　　　　    {
+　　　　　　　    if　(!System.IO.File.Exists(filename))
+　　　　　　　　　    using　(System.IO.Stream　s　=　System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
+　　　　　　　　　    using　(System.IO.FileStream　fs　=　new　System.IO.FileStream(filename,　System.IO.FileMode.Create))
+　　　　　　　　　    {
+　　　　　　　　　　　　    byte[]　b　=　new　byte[s.Length];
+　　　　　　　　　　　　    s.Read(b,　0,　b.Length);
+　　　　　　　　　　　　    fs.Write(b,　0,　b.Length);
+　　　　　　　　    }
+　　　　    }
+
         static void Main(string[] args)
         {
+
+            ExtractResourceToFile("Winista.HtmlParser", Environment.CurrentDirectory + "\\Winista.HtmlParser.dll");
+
+            //*****************************
+
             var downLoader = new FileDownLoader
             {
                 HostAddress = "http://laod.cn/hosts/2015-google-hosts.html"
