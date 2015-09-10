@@ -15,12 +15,21 @@ namespace FetchNet
 
         public   bool  UpdateFile(string txtContent)
         {
-           // FileStream stream = File.Create();
-            System.IO.StreamWriter sw = new System.IO.StreamWriter(@"C:\Windows\System32\drivers\etc\hosts", false);
+            try
+            {
+                System.IO.StreamWriter sw = new System.IO.StreamWriter(@"C:\Windows\System32\drivers\etc\hosts", false);
 
-            sw.Write(txtContent);
-            sw.Close();
-            return true;
+                sw.Write(txtContent);
+                sw.Close();
+                return true;
+            }
+            catch (Exception ex)            // 有可能没有权限去更改hosts文件
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+           
+           
         }
     }
 }
