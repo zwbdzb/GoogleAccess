@@ -15,7 +15,8 @@ namespace FetchNet
     {
         public string Label
         {
-            get; set;
+            get;
+            set;
         }
 
         public AddressCollection Prase<T>(string htmlContent)

@@ -38,14 +38,7 @@ namespace FetchNet
         // 根据特定算法  返回最有可能的1个地址
         public Address GetMostPossibleAddress()
         {
-            //LINQ  Where 这个竟然不是破坏性的 ？
-            this.Collection = this.Collection.Where(m => m.Href.StartsWith(@"http://laod.cn/wp-content/uploads") == true).ToList();
-
-            Console.WriteLine(this.Collection.Last().Text + "\t" + this.Collection.Last().Href);
-
-            return this.Collection.Last();
-
-            // 对的，LINQ Where 本来就不是破坏性的，因为里面应用了装饰模式，具有延迟执行的特性，在查询语句执行之前，本体是不会改变的。这个我们可以仔细看一下装饰模式的设计原理。
+            return this.Collection.LastOrDefault(x => x.Href.StartsWith(@"http://laod.cn/wp-content/uploads"));
         }
 
         public void GetAllAddress()

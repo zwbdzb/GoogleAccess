@@ -18,5 +18,4 @@ C:\Users\smart.huang\Source\Repos\Fetch\FetchNet\FetchNet\bin\Debug\FetchNet.pdb
 C:\Users\smart.huang\Source\Repos\Fetch\FetchNet\FetchNet\bin\Debug\Winista.HtmlParser.dll
 C:\Users\smart.huang\Source\Repos\Fetch\FetchNet\FetchNet\obj\Debug\FetchNet.exe
 C:\Users\smart.huang\Source\Repos\Fetch\FetchNet\FetchNet\obj\Debug\FetchNet.pdb
-C:\Users\smart.huang\Source\Repos\Fetch\FetchNet\FetchNet\obj\Debug\FetchNet.csproj.GenerateResource.Cache
-C:\Users\smart.huang\Source\Repos\Fetch\FetchNet\FetchNet\obj\Debug\FetchNet.Properties.Resources.resources
+C:\Users\smart.huang\Source\Repos\Fetch\FetchNet\FetchNet\obj\Debug\FetchNet.csprojResolveAssemblyReference.cache
