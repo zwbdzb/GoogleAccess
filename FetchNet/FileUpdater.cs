@@ -23,6 +23,11 @@ namespace FetchNet
                 sw.Close();
                 return true;
             }
+            catch (UnauthorizedAccessException unex)
+            {
+
+                return false;
+            }
             catch (Exception ex)            // 有可能没有权限去更改hosts文件
             {
                 Console.WriteLine(ex.Message);
