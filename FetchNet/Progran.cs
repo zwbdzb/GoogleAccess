@@ -31,6 +31,7 @@ namespace FetchNet
                 HostAddress = "http://laod.cn/hosts/2015-google-hosts.html"
             };
 
+            Console.WriteLine("开始检索host文件，请稍等...");
             downLoader.FileDownLoad();
 
             var parser = new CommonLabelPraser();
@@ -40,12 +41,12 @@ namespace FetchNet
 
             downLoader.HostAddress = addr.Href;
             Console.WriteLine(downLoader.HostAddress);
-
+            Console.WriteLine("即将下载hosts文件");
             downLoader.FileDownLoad();
 
             var updater = new FileUpdater();
             updater.UpdateFile(downLoader.HtmlContent);
-            Console.WriteLine("更新完成");
+            Console.WriteLine("更新本地hosts文件完成");
 
             Console.ReadKey();
 
