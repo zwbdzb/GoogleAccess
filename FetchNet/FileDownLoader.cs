@@ -20,7 +20,9 @@ namespace FetchNet
         public string HostAddress { get; set; }
         internal string HtmlContent { get; set; }
 
-        // 下载文件
+        /// <summary>
+        /// 下载文件
+        /// </summary>
         public void FileDownLoad()
         {
             var web = new WebClient();
