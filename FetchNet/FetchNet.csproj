@@ -55,6 +55,7 @@
     <Compile Include="FileDownLoader.cs" />
     <Compile Include="AddressCollection.cs" />
     <Compile Include="ILabelPraser.cs" />
+    <Compile Include="Progran.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
