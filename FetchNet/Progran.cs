@@ -31,10 +31,11 @@ namespace FetchNet
                 HostAddress = "http://laod.cn/hosts/2015-google-hosts.html"
             };
 
-            Console.WriteLine("开始检索host文件，请稍等...");
+            Console.WriteLine("开始检索hosts文件，请稍等...");
             downLoader.FileDownLoad();
 
             var parser = new CommonLabelPraser();
+            // 找到指定标签还是慢了，尝试换一种文件对比的方式？
             var col = downLoader.LabelPrase<ATag>(parser);
 
             Address addr = col.GetMostPossibleAddress();
