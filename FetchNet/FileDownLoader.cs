@@ -25,10 +25,12 @@ namespace FetchNet
         /// </summary>
         public void FileDownLoad()
         {
-            var web = new WebClient();
-            var byteData = web.DownloadData(HostAddress);
-            var str = Encoding.UTF8.GetString(byteData);
-            HtmlContent = str;
+            using (var web = new WebClient())
+            {
+                var byteData = web.DownloadData(HostAddress);
+                var str = Encoding.UTF8.GetString(byteData);
+                HtmlContent = str;
+            }
             Debug.WriteLine(HtmlContent);
         }
 
