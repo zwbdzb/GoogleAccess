@@ -32,21 +32,35 @@ namespace FetchNet
             };
 
             Console.WriteLine("开始检索hosts文件，请稍等...");
+            var watcher = new System.Diagnostics.Stopwatch();
+            watcher.Start();
             downLoader.FileDownLoad();
+            watcher.Stop();
+            Console.WriteLine("下载用时：" + watcher.Elapsed);
 
             var parser = new CommonLabelPraser();
-            // 找到指定标签还是慢了，尝试换一种文件对比的方式？
+            
+            watcher.Reset();
+            watcher.Start();
             var col = downLoader.LabelPrase<ATag>(parser);
+            watcher.Stop();
+            Console.WriteLine("解析用时：" + watcher.Elapsed);
+
 
             Address addr = col.GetMostPossibleAddress();
 
             downLoader.HostAddress = addr.Href;
             Console.WriteLine(downLoader.HostAddress);
             Console.WriteLine("即将下载hosts文件");
-            downLoader.FileDownLoad();
 
+            watcher.Reset();
+            watcher.Start();
+            downLoader.FileDownLoad();
             var updater = new FileUpdater();
             updater.UpdateFile(downLoader.HtmlContent);
+            watcher.Stop();
+            Console.WriteLine("下载并替换用时：" + watcher.Elapsed );
+
             Console.WriteLine("更新本地hosts文件完成");
 
             Console.ReadKey();
