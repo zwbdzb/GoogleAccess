@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FetchNet
+namespace GoogleAccess
 {
     // 解析器
     public interface ILabelPraser

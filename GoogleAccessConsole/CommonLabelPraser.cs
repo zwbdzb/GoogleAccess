@@ -9,7 +9,7 @@ using Winista.Text.HtmlParser.Lex;
 using Winista.Text.HtmlParser.Tags;
 using Winista.Text.HtmlParser.Util;
 
-namespace FetchNet
+namespace GoogleAccess
 {
     public class CommonLabelPraser : ILabelPraser
     {

@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace FetchNet
+namespace GoogleAccess
 {
     // 数据结构；地址列表
     public class AddressCollection
@@ -22,7 +18,7 @@ namespace FetchNet
         {
             get
             {
-                throw new System.NotImplementedException();
+                throw new NotImplementedException();
             }
             set
             {
@@ -53,22 +49,11 @@ namespace FetchNet
     // 地址
     public class Address
     {
-        public string Text
-        {
-            get;
-            set;
-        }
+        public string Text  { get;set; }
 
-        public string Href
-        {
-            get;
-            set;
-        }
+        public string Href  {get;set; }
 
-        public override string ToString()
-        {
-            return Text.ToString() + "\t" + Href.ToString();
-        }
+        public override string ToString() => Text.ToString() + "\t" + Href.ToString();
     }
 
 }

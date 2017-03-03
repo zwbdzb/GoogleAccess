@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using  System.IO;
 
-namespace FetchNet
+namespace GoogleAccess
 {
     public class FileUpdater
     {

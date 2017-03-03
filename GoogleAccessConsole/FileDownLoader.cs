@@ -13,7 +13,7 @@ using Winista.Text.HtmlParser.Lex;
 using Winista.Text.HtmlParser.Tags;
 using Winista.Text.HtmlParser.Util;
 
-namespace FetchNet
+namespace GoogleAccess
 {
     public class FileDownLoader                 // 泛型类声明的写法<T>, 约束泛型参数T
     {      

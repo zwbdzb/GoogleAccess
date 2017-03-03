@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace FetchNet
+namespace GoogleAccess
 {
     public class ALabelParser : ILabelPraser
     {
