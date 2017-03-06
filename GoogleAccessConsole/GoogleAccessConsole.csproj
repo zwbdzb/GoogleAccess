@@ -7,8 +7,8 @@
     <ProjectGuid>{3CCFE907-639B-4E1C-BB67-46FCA256B0A9}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GoogleAccessComsole</RootNamespace>
-    <AssemblyName>GoogleAccessComsole</AssemblyName>
+    <RootNamespace>GoogleAccess</RootNamespace>
+    <AssemblyName>GoogleAccessConsole</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
